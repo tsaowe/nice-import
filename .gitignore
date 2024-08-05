@@ -1,0 +1,15 @@
+.idea
+*.iml
+.DS_Store
+local
+.scannerwork
+.vscode
+.yarn
+dist
+cmake-build-debug
+__pycache__
+coverage
+node_modules
+log
+logs
+yarn-error.log
