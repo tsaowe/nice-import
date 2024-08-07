@@ -17,7 +17,8 @@ program
   .action((entryFile) => {
     const startTime = new Date().getTime();
     const realEntryFile = entryFile.replace(/:\w+$/g, "");
-    const originContent = fs.readFileSync(entryFile, "utf8").toString();
+    const fullPath = path.resolve(process.cwd(), realEntryFile);
+    const originContent = fs.readFileSync(fullPath, "utf8").toString();
     const newContent = convert(realEntryFile);
     const endTime = new Date().getTime();
     const diff = endTime - startTime;
